@@ -135,7 +135,6 @@ p {
 }
 
 /* ==== ==== About ==== ==== */
-/* //TODO: FIX THIS DUPLICATE */
 .column-left {
   min-height: 750px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 32, 59, 0.9)));
@@ -146,11 +145,11 @@ p {
   object-fit: cover;
   o-object-fit: cover;
 }
-/* //TODO: FIX THIS DUPLICATE */
+
 .column-left, .column-right {
   padding-bottom: 2rem;
   padding-top: 1rem;
-  max-height: 800px;
+  /* max-height: 800px; */
 }
 
 .section-title {
@@ -167,7 +166,7 @@ p {
   font-weight: 500;
 }
 
-.hobbies {
+.hobbies, .cv-download {
   padding: 1rem 2rem 0rem 5rem;
   display: flex;
 }
@@ -191,16 +190,28 @@ p {
   text-align: center;
 }
 
-#about .fa {
+.hobbies .fa {
   color: #7AFFC8;
 }
 
-#about a {
-  color: #7AFFC8;
+.cv-download button {
+    color: #fff;
+    background-color: #6450E6;
+    border: 2px solid #ffffff55;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 20px 0;
+    font-size: .9em;
 }
 
-#about a:hover {
-  text-decoration: underline !important;
+.cv-download .fa {
+  font-size: 1.2em;
+}
+
+.cv-download button:hover {
+  border: 2px solid #ffffff90;
+  background-color: #6450E6;
 }
 
 /* ==== ==== Skills ==== ==== */
@@ -280,16 +291,93 @@ p {
 }
 
 /* ==== ==== Projects ==== ==== */
-.projects {
+.column-left-projects {
   min-height: 750px;
-  /* overflow: hidden; */
+  background-position: 0px 0px, 100% 50%;
+  background-size: auto, cover;
+  background-attachment: scroll, scroll;
+  object-fit: cover;
+  o-object-fit: cover;
 }
 
 .gallery {
-  min-height: 252px;
+  min-height: 222px;
   background-position: 0px 0px;
   background-size: cover;
   opacity: 1;
+  position: relative;
+  text-align: center;
+}
+
+.gallery-btn {
+  padding: 5px 10px;
+  font-size: .8em;
+  margin: 2px 5px;
+}
+
+.gallery button {
+  color: #fff;
+  background-color: #6450E6;
+  border: 2px solid #ffffff55;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.gallery button:hover {
+  border: 2px solid #ffffff;
+  background-color: #6450E6;
+}
+
+.hvrbox {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  max-width: 100%;
+  height: auto;
+}
+
+.hvrbox h3, .hvrbox p {
+  color: #fff;
+}
+
+.hvrbox .hvrbox-layer_top {
+  opacity: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 25px;
+  -moz-transition: all 0.3s ease-in-out 0s;
+  -webkit-transition: all 0.3s ease-in-out 0s;
+  -ms-transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+.hvrbox:hover .hvrbox-layer_top,
+.hvrbox.active .hvrbox-layer_top {
+  opacity: 1;
+}
+
+.hvrbox .hvrbox-text {
+  text-align: center;
+  /* display: inline-block; */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -moz-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.hvrbox-text p {
+  padding: 0;
+  text-align: center;
 }
 
 .img-1 {
@@ -322,46 +410,41 @@ p {
   background-image: linear-gradient(180deg, rgba(50, 58, 69, 0.15), rgba(50, 58, 69, 0.34)), url('/assets/images/placeholder-6.jpg');
 }
 
-.text-left-block {
+/* .text-left-block {
   width: 100%;
   left: 0;
   height: 100%;
   z-index: 999;
   overflow: hidden;
-}
-
-.text-left-block .left-center-text {
-  /* display: table; */
-  /* position: relative; */
-  /* height: 100vh; */
-  /* padding: 0 10%; */
-  /* text-align: left; */
-}
-
-/* .text-left-block .left-center-text .left-center-part { */
-  /* display: table-cell; */
-  /* vertical-align: middle;
 } */
-
-.left-center-part h2 {
+/* .text-left-block .left-center-text {
+  display: table;
+  position: relative;
+  height: 100vh;
+  padding: 0 10%;
+  text-align: left;
+} */
+/* .text-left-block .left-center-text .left-center-part { */
+/* display: table-cell; */
+/* vertical-align: middle;
+} */
+/* .left-center-part h2 {
   font-weight: 500;
-}
-
+} */
 /* .block-team {
   margin: 1rem 0 0;
 } */
-
-.block-team img.project-img {
-  max-width: 100%;
+.project-img {
+  max-height: 252px;
   object-fit: fill;
 }
 
-.block-team h3 {
+.block-projects h3 {
   margin-top: 15px;
   font-size: 1.4rem;
 }
 
-.block-team small {
+.subtitle {
   text-transform: uppercase;
   font-size: 1rem;
   color: #7AFFC8;
