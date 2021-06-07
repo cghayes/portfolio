@@ -17,10 +17,13 @@ class Header extends HTMLElement {
                   <a class="nav-link active" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#about">About</a>
+                  <a class="nav-link" href="#projects">Resume</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#projects">Projects</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#contact">Contact</a>
@@ -40,8 +43,8 @@ class Footer extends HTMLElement {
     this.innerHTML = `
       <footer>
         <div class="container-fluid" id="footer">
-          <div class="row footer">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 footer-col">
+          <div class="row">
+            <div class="col-12 footer-col">
               <p>&#169; 2021 Calley Hayes</p>
             </div>
           </div>
